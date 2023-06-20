@@ -3,11 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#E4E7FD"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ImageView
+        android:id="@+id/imm1"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logounisegnala"
+        android:layout_centerHorizontal="true" />
+
     <TextView
+        android:id="@+id/titolo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profilo Page"/>
+        android:text="Il tuo profilo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/imm1"/>
+
+    <ImageView
+        android:id="@+id/imm2"
+        android:layout_width="140dp"
+        android:layout_height="180dp"
+        android:src="@drawable/user"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titolo"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textview_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/imm2"
+         />
+
+    <TextView
+        android:id="@+id/textview_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/textview_email"
+         />
+    <Button
+        android:id="@+id/buttonModificaPassword"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonangoliarrotondati"
+        android:text="Modifica Password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:layout_below="@id/textview_password"
+        />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:background="@drawable/buttonangoliarrotondati"
+        android:backgroundTint="#DF405C"
+        android:backgroundTintMode="src_in"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/buttonModificaPassword"
+        />
+
 
 </RelativeLayout>
