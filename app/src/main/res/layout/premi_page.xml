@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logounisegnala"
+        android:layout_centerHorizontal="true"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Premi Page"/>
+        android:id="@+id/idTesto"
+        android:layout_centerHorizontal="true"
+        android:text="Lista Premi"
+        android:layout_below="@id/imageView"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/testoPunteggio"
+        android:layout_alignParentLeft="true"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/idTesto"
+        android:paddingTop="40dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView"
+        android:paddingTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/buttonRiscatta"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:background="@drawable/buttonangoliarrotondati"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:text="Riscatta premi" />
 
 </RelativeLayout>

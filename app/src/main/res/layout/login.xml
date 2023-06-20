@@ -36,6 +36,7 @@
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:background="@drawable/buttonangoliarrotondati"
+        android:backgroundTint="#655AF6"
         android:layout_marginBottom="4dp"
         android:text="Login" />
 
