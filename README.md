@@ -1,5 +1,5 @@
 <div align = "center">
-<img src="[https://i.imgur.com/Kj1SJZT.png](https://imgur.com/cOp3Kiy)" alt="logo" width="600"/>
+<img src="https://imgur.com/cOp3Kiy" alt="logo" width="600"/>
 <h2>Università degli Studi di Salerno</h2>
 Progetto di <strong> "Interazione Uomo Macchina" </strong>
 </div>
