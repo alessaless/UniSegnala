@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/NomeSegnalazione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:text="Nuova segnalazione"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextTitolo"
+                android:layout_below="@id/NomeSegnalazione"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#D9D9D9"
+                android:background="@drawable/edittext"
+                android:hint="  Titolo" />
+
+            <EditText
+                android:id="@+id/editTextDescrizione"
+                android:layout_below="@id/editTextTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#D9D9D9"
+                android:inputType="text|textMultiLine"
+                android:gravity="top"
+                android:background="@drawable/edittext"
+                android:hint=" Descrizione" />
+
+            <Button
+                android:id="@+id/buttonFoto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/editTextDescrizione"
+                android:background="@drawable/buttonangoliarrotondati"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="#655AF6"
+                android:layout_marginBottom="4dp"
+                android:layout_centerHorizontal="true"
+                android:text="Inserisci foto" />
+
+            <Button
+                android:id="@+id/buttonAggiungi"
+                android:layout_centerHorizontal="true"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/buttonFoto"
+                android:background="@drawable/buttonangoliarrotondati"
+                android:backgroundTint="#655AF6"
+                android:layout_marginBottom="4dp"
+                android:text="Invia" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

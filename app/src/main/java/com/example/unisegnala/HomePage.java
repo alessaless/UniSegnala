@@ -1,5 +1,8 @@
 package com.example.unisegnala;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,11 +17,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends Fragment {
 
+    Dialog dialog;
     public HomePage() {
         // Costruttore vuoto richiesto
     }
@@ -32,7 +39,7 @@ public class HomePage extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        dialog = new Dialog(getContext());
         ListView listView = view.findViewById(R.id.listView);
 
         ArrayList<Segnalazione> segnalazioni = new ArrayList<>();
@@ -44,6 +51,19 @@ public class HomePage extends Fragment {
         AdapterSegnalazione adapter = new AdapterSegnalazione(getContext(), segnalazioni);
         listView.setAdapter(adapter);
 
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openModal();
+            }
+        });
+    }
+
+    private void openModal(){
+        dialog.setContentView(R.layout.modal_aggiungi_segnalazione);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
 
