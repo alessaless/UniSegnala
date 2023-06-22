@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#E4E7FD">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="170dp"
-        android:layout_height="140dp"
+        android:layout_height="150dp"
         android:src="@drawable/logounisegnala"
         android:layout_centerHorizontal="true"
         />
@@ -39,12 +40,13 @@
         />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listaPremi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/imageView"
+        android:layout_below="@id/testoPunteggio"
         android:paddingTop="16dp"
-        android:divider="@android:color/darker_gray"
+        android:scrollbars="vertical"
+        android:divider="@android:color/transparent"
         android:dividerHeight="1dp" />
 
     <Button

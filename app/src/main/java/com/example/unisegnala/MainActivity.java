@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Crea istanze dei fragment corrispondenti
         homeFragment = new HomePage();
-        premiFragment = new Premi();
-        segnalazioniFragment = new Segnalazioni();
+        premiFragment = new PremiActivity();
+        segnalazioniFragment = new SegnalazioniActivity();
         profiloFragment = new Profilo();
 
         // Imposta il fragment iniziale (es. HomeFragment)

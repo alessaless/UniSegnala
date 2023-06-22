@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Segnalazioni extends Fragment {
+public class SegnalazioniActivity extends Fragment {
 
-    public Segnalazioni() {
+    public SegnalazioniActivity() {
         // Costruttore vuoto richiesto
     }
 

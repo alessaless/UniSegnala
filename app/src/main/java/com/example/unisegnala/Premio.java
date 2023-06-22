@@ -2,9 +2,9 @@ package com.example.unisegnala;
 
 public class Premio {
     private String descrizione;
-    private int punteggio;
+    private String punteggio;
 
-    public Premio(String descrizione, int punteggio) {
+    public Premio(String descrizione, String punteggio) {
         this.descrizione = descrizione;
         this.punteggio = punteggio;
     }
@@ -17,11 +17,11 @@ public class Premio {
         this.descrizione = descrizione;
     }
 
-    public int getPunteggio() {
+    public String getPunteggio() {
         return punteggio;
     }
 
-    public void setPunteggio(int punteggio) {
+    public void setPunteggio(String punteggio) {
         this.punteggio = punteggio;
     }
 }

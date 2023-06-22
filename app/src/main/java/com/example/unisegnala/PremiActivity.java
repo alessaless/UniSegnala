@@ -2,6 +2,9 @@ package com.example.unisegnala;
 
 import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.text.Spannable;
@@ -10,11 +13,14 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
-public class Premi extends Fragment {
+import java.util.ArrayList;
 
-    public Premi() {
+public class PremiActivity extends Fragment {
+
+    public PremiActivity() {
         // Costruttore vuoto richiesto
     }
 
@@ -46,6 +52,23 @@ public class Premi extends Fragment {
 
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ListView listView = view.findViewById(R.id.listaPremi);
+
+        ArrayList<Premio> premi = new ArrayList<>();
+
+        premi.add(new Premio("5% sconto sulle fotocopie","250"));
+        premi.add(new Premio("Borraccia gratuita in associazione","750"));
+
+
+        AdapterPremio adapterPremio = new AdapterPremio(getContext(),premi);
+        listView.setAdapter(adapterPremio);
+
     }
 
 
