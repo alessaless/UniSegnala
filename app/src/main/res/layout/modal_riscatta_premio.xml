@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/InfoPremio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:text="Premio riscattato con successo"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/immagineCheck"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/InfoPremio"
+                android:src="@drawable/checkbox"
+                />
+
+            <Button
+                android:id="@+id/buttonChiudi"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/immagineCheck"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/buttonangoliarrotondati"
+                android:backgroundTint="#655AF6"
+                android:text="Chiudi" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
@@ -7,8 +8,7 @@
     android:gravity="center_horizontal"
     android:layout_marginBottom="16dp">
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="140dp"
         app:cardElevation="4dp"
@@ -40,17 +40,20 @@
                 android:layout_alignBottom="@+id/nomePremio"
                 android:textSize="16sp"
                 android:textColor="#DF405C"
+                android:textStyle="bold"
                 android:padding="20dp" />
 
             <CheckBox
                 android:id="@+id/myCheckBox"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_toRightOf="@+id/nomePremio"
-                android:layout_centerHorizontal="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/sfondocheckbox"
-                android:layout_margin="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_toRightOf="@+id/nomePremio"
+                android:background="?android:attr/listChoiceIndicatorMultiple"
+                android:button="@null"
                 android:checked="false" />
 
 

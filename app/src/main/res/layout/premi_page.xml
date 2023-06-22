@@ -35,7 +35,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_below="@id/idTesto"
-        android:paddingTop="40dp"
+        android:paddingTop="30dp"
         android:layout_marginLeft="15dp"
         />
 
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/testoPunteggio"
-        android:paddingTop="16dp"
+        android:paddingTop="10dp"
         android:scrollbars="vertical"
         android:divider="@android:color/transparent"
         android:dividerHeight="1dp" />
