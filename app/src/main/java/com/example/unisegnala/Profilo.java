@@ -12,17 +12,20 @@ import androidx.fragment.app.Fragment;
 
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Profilo extends Fragment {
 
+    private Dialog secondaModale;
     Dialog dialog;
     public Profilo() {
         // Costruttore vuoto richiesto
@@ -91,9 +94,41 @@ public class Profilo extends Fragment {
         });
     }
 
+
     private void openModal(){
         dialog.setContentView(R.layout.modal_modifica_password);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button fa = dialog.findViewById(R.id.Conferma);
+        EditText nuova= dialog.findViewById(R.id.NuovaPassword);
+        EditText conferma= dialog.findViewById(R.id.ConfermaPassword);
+        CharSequence text1 = nuova.getText();
+        CharSequence text2 = conferma.getText();
+        fa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if((nuova.getText().length() !=0 && conferma.getText().length() != 0) && TextUtils.equals(text1, text2) ) {
+                    openModal1();
+                }
+            }
+        });
         dialog.show();
+    }
+
+    private void openModal1(){
+        dialog.dismiss();
+        dialog.setContentView(R.layout.modal_conferma);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        Button b = dialog.findViewById(R.id.buttonConf);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+
+
     }
 }
