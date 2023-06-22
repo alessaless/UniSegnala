@@ -1,7 +1,13 @@
 package com.example.unisegnala;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.text.Spannable;
@@ -10,10 +16,14 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Profilo extends Fragment {
 
+    Dialog dialog;
     public Profilo() {
         // Costruttore vuoto richiesto
     }
@@ -64,5 +74,26 @@ public class Profilo extends Fragment {
         // Impostazione del testo nel TextView
         textView1.setText(spannableString1);
         return view;
+
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        dialog = new Dialog(getContext());
+        Button fab = view.findViewById(R.id.buttonModificaPassword);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openModal();
+            }
+        });
+    }
+
+    private void openModal(){
+        dialog.setContentView(R.layout.modal_modifica_password);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 }
