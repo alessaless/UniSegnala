@@ -25,6 +25,8 @@ android:layout_marginBottom="16dp">
                 android:layout_height="80dp"
                 android:layout_centerVertical="true"
                 android:src="@drawable/segnalazione"
+                android:background="@drawable/rounded_corners"
+                android:clipToOutline="true"
                 android:id="@+id/immagineSegnalazione"/>
 
             <RelativeLayout

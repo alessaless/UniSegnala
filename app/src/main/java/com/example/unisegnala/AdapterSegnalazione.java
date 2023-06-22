@@ -1,6 +1,7 @@
 package com.example.unisegnala;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,18 @@ public class AdapterSegnalazione extends ArrayAdapter<Segnalazione> {
 
         textViewTitle.setText(customObject.getNome());
         textViewDescription.setText(customObject.getDescrizione());
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to launch the new activity
+                Intent intent = new Intent(getContext(), SingolaSegnalazione.class);
+                // Start the new activity
+                intent.putExtra("titolo", textViewTitle.getText().toString());
+                intent.putExtra("descrizione", textViewDescription.getText().toString());
+                getContext().startActivity(intent);
+            }
+        });
 
         return convertView;
     }

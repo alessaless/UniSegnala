@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/NomeSegnalazione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:text="Segnalazione registrata con successo"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/NomeSegnalazione"
+                android:src="@drawable/check"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:id="@+id/logo"/>
+
+            <Button
+                android:id="@+id/buttonChiudi"
+                android:layout_centerHorizontal="true"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/logo"
+                android:background="@drawable/buttonangoliarrotondati"
+                android:backgroundTint="#655AF6"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Chiudi" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
