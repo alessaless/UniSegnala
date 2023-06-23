@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -106,7 +107,11 @@ public class Profilo extends Fragment {
         fa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((nuova.getText().length() !=0 && conferma.getText().length() != 0) && TextUtils.equals(text1, text2) ) {
+                if(nuova.getText().length() == 0 && conferma.getText().length() == 0 ) {
+                    Toast.makeText(getContext(), "Parametri vuoti", Toast.LENGTH_SHORT).show();
+                }else if(!TextUtils.equals(text1, text2)){
+                    Toast.makeText(getContext(), "Password diverse", Toast.LENGTH_SHORT).show();
+                }else{
                     openModal1();
                 }
             }
