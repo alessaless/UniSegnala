@@ -35,6 +35,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_below="@id/idTesto"
+        android:layout_marginTop="10dp"
         android:paddingTop="30dp"
         android:layout_marginLeft="15dp"
         />
@@ -59,5 +60,14 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="40dp"
         android:text="Riscatta premi" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ricorda di non provocare danni agli ambienti solo per ottenere dei premi!"
+        android:layout_below="@id/buttonRiscatta"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
