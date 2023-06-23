@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#E4E7FD">
+
+    <ImageView
+        android:id="@+id/immagineLogo"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logounisegnala"
+        android:layout_centerHorizontal="true"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Segnalazioni Page"/>
+        android:id="@+id/testoTitolo"
+        android:layout_centerHorizontal="true"
+        android:text="Tutte le segnalazioni"
+        android:layout_below="@id/immagineLogo"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/testoSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/testoTitolo"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="30dp"
+        android:text="Visualizza risolte"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/slider"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/testoTitolo"
+        android:layout_toRightOf="@+id/testoSlider"
+        android:paddingTop="31dp"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track" />
+
+    <ListView
+        android:id="@+id/listaSegnalazioni"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/testoSlider"
+        android:paddingTop="10dp"
+        android:scrollbars="vertical"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>
