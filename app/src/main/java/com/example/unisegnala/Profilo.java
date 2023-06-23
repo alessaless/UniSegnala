@@ -2,6 +2,7 @@ package com.example.unisegnala;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -91,6 +92,15 @@ public class Profilo extends Fragment {
             @Override
             public void onClick(View view) {
                 openModal();
+            }
+        });
+
+        Button buttonLogout = view.findViewById(R.id.buttonLogout);
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
