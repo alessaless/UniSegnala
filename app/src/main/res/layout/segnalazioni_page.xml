@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -60,5 +61,50 @@
         android:scrollbars="vertical"
         android:divider="@android:color/transparent"
         android:dividerHeight="1dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/pag1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonangoliarrotondati"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/pag2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/pag1"
+            android:background="@drawable/buttonangoliarrotondati"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:text=">" />
+
+        <Button
+            android:id="@+id/pag3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/pag1"
+            android:background="@drawable/buttonangoliarrotondati"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:text="1" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
